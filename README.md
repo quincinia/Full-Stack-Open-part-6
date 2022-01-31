@@ -6,3 +6,6 @@ It feels like my reducer could be written more succinctly, but maybe I'm just be
 
 ## Exercise 6.2
 App now works using the store. No major changes, just adding in the missing functions.
+
+## Exercise 6.3
+Reworked the directory structure. Add your action creators first, as they determine the structure of your actions. Don't remember why we use non-equality when we call `map`. Otherwise followed the story.
