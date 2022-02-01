@@ -9,6 +9,8 @@ const anecdotesAtStart = [
 
 const getId = () => (100000 * Math.random()).toFixed(0)
 
+const comp = (a, b) => b.votes - a.votes
+
 const asObject = (anecdote) => {
     return {
         content: anecdote,
@@ -30,11 +32,13 @@ const reducer = (state = initialState, action) => {
                 ...anecdoteToChange,
                 votes: anecdoteToChange.votes + 1
             }
-            return state.map((anecdote) =>
-                anecdote.id !== id ? anecdote : changedAnecdote
-            )
+            return state
+                .map((anecdote) =>
+                    anecdote.id !== id ? anecdote : changedAnecdote
+                )
+                .sort(comp)
         case 'NEW_ANECDOTE':
-            return [...state, asObject(action.data.anecdote)]
+            return [...state, asObject(action.data.anecdote)].sort(comp)
         default:
             return state
     }

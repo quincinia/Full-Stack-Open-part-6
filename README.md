@@ -12,3 +12,6 @@ Reworked the directory structure. Add your action creators first, as they determ
 
 ## Exercise 6.4
 You can now add new anecdotes. I used `anecdoteToChange.votes++` to add new votes, but I see that this was incorrect because postfix will return the old value, which means that the update won't change anything. Used `+1` instead of incrementing so that the orginal state isn't changed.
+
+## Exercise 6.5
+Anecdotes are now sorted by votes. Like with part 5, I am using the `sort` method instead of manually bubbling the voted element. The default state does not need to be sorted because all anecdotes are zero.
