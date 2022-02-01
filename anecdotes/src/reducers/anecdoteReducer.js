@@ -28,7 +28,7 @@ const reducer = (state = initialState, action) => {
             const anecdoteToChange = state.find((a) => a.id === id)
             const changedAnecdote = {
                 ...anecdoteToChange,
-                votes: anecdoteToChange.votes++
+                votes: anecdoteToChange.votes + 1
             }
             return state.map((anecdote) =>
                 anecdote.id !== id ? anecdote : changedAnecdote
@@ -53,4 +53,5 @@ export const createAnecdote = (anecdote) => {
         data: { anecdote }
     }
 }
+
 export default reducer
