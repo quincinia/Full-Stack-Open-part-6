@@ -9,3 +9,6 @@ App now works using the store. No major changes, just adding in the missing func
 
 ## Exercise 6.3
 Reworked the directory structure. Add your action creators first, as they determine the structure of your actions. Don't remember why we use non-equality when we call `map`. Otherwise followed the story.
+
+## Exercise 6.4
+You can now add new anecdotes. I used `anecdoteToChange.votes++` to add new votes, but I see that this was incorrect because postfix will return the old value, which means that the update won't change anything. Used `+1` instead of incrementing so that the orginal state isn't changed.
