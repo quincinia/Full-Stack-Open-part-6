@@ -18,3 +18,6 @@ Anecdotes are now sorted by votes. Like with part 5, I am using the `sort` metho
 
 ## Exercise 6.6
 Action creators have been in their own since 6.3 (`addVote`)and 6.4 (`createAnecdote`).
+
+## Exercise 6.7
+The form for adding new anecdotes has been moved to its own component. Wrapped the form in a fragment/empty tag in order to preserve the same HTML structure as before. Otherwise, the form was copied pretty directly from the App.
