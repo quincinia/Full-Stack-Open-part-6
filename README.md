@@ -15,3 +15,6 @@ You can now add new anecdotes. I used `anecdoteToChange.votes++` to add new vote
 
 ## Exercise 6.5
 Anecdotes are now sorted by votes. Like with part 5, I am using the `sort` method instead of manually bubbling the voted element. The default state does not need to be sorted because all anecdotes are zero.
+
+## Exercise 6.6
+Action creators have been in their own since 6.3 (`addVote`)and 6.4 (`createAnecdote`).
