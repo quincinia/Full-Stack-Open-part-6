@@ -21,3 +21,6 @@ Action creators have been in their own since 6.3 (`addVote`)and 6.4 (`createAnec
 
 ## Exercise 6.7
 The form for adding new anecdotes has been moved to its own component. Wrapped the form in a fragment/empty tag in order to preserve the same HTML structure as before. Otherwise, the form was copied pretty directly from the App.
+
+## Exercise 6.8
+The anecdotes list is now its own component. Again, this was a relatively straightforward extraction.
