@@ -24,3 +24,6 @@ The form for adding new anecdotes has been moved to its own component. Wrapped t
 
 ## Exercise 6.8
 The anecdotes list is now its own component. Again, this was a relatively straightforward extraction.
+
+## Exercise 6.9
+Installed Redux DevTools. Moved the store to its own file. I put it alongside `index.js` because it doesn't really fit within the existing directory structure.
