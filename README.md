@@ -30,3 +30,11 @@ Installed Redux DevTools. Moved the store to its own file. I put it alongside `i
 
 ## Exercise 6.10
 Only going to have 1 action (`SET_NOTIFICATION`) for the notification reducer. It will work like the previous parts where the Notification will render `null` when it detects that the message is `null`. Updated the store to hold notification messages alongside the messages. Make sure that whenever you update the structure of the store, you also update any selectors within your components. 
+
+## Exercise 6.11
+Notification messages disappear after 5 seconds\*.  
+\*However, if a new notification is rendered *before* 5 seconds passes, then that notification **will not** reset the timer.
+
+I don't know why I didn't think of this problem for the last few parts that used the Notification component. One way to solve this would be to use two actions (`set` and `remove`) and manage a private variable in the notification reducer that acts as a sort of semaphore. The semaphore counts up from 0, incrementing when we call `set`, and decrementing when we call `remove`. A call to `remove` will only truly remove the notification if the notification is at 0 after the decrement.
+
+To keep things consistent with previous parts, I will **not** be doing anything to prevent this issue.
