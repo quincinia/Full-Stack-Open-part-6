@@ -27,3 +27,6 @@ The anecdotes list is now its own component. Again, this was a relatively straig
 
 ## Exercise 6.9
 Installed Redux DevTools. Moved the store to its own file. I put it alongside `index.js` because it doesn't really fit within the existing directory structure.
+
+## Exercise 6.10
+Only going to have 1 action (`SET_NOTIFICATION`) for the notification reducer. It will work like the previous parts where the Notification will render `null` when it detects that the message is `null`. Updated the store to hold notification messages alongside the messages. Make sure that whenever you update the structure of the store, you also update any selectors within your components. 
