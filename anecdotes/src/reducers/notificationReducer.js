@@ -12,12 +12,13 @@ const notificationReducer = (state = initialState, action) => {
             }
             return {
                 ...state,
-                timer: action.timer
+                timer: action.data.timer
             }
         case 'SET_NOTIFICATION':
+            // If we wish to clear the notification (using null), then we will also clear the timer
             return {
-                ...state,
-                message: action.message
+                message: action.data.message,
+                timer: action.data.message === null ? null : state.timer
             }
         default:
             return state
@@ -27,14 +28,14 @@ const notificationReducer = (state = initialState, action) => {
 export const setTimer = (timer) => {
     return {
         type: 'SET_TIMER',
-        timer
+        data: { timer }
     }
 }
 
 export const setNotifMessage = (message) => {
     return {
         type: 'SET_NOTIFICATION',
-        message
+        data: { message }
     }
 }
 
