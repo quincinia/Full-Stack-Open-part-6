@@ -37,3 +37,8 @@ Notification messages disappear after 5 seconds
 One way to implement this would be to use two actions (`set` and `remove`) and manage a private variable in the notification reducer that acts as a sort of semaphore. The semaphore counts up from 0, incrementing when we call `set`, and decrementing when we call `remove`. A call to `remove` will only truly remove the notification if the notification is at 0 after the decrement.
 
 Another solution could be to attach a `timer` property to the store that holds the timer ID of the last recently set timer. If a new timer is set before the last timer goes off, we will first clear the last timer and write in the ID of the new one. If no new timers are set after 5 seconds, then the removal will proceed normally, without any added logic. This is the solution that is used. I believe it is easier to understand and implement.
+
+## Exercise 6.12
+Anecdotes can now be filtered. Filtering **is case-sensitive**, unlike the previous filters in earlier parts. The implementation follows the story closely.
+
+Action data will be stored within the `data` field of the object, even if there is only one piece of data. Not sure why the story uses the `data` field at first, but drops it in part b.
