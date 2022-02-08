@@ -42,3 +42,8 @@ Another solution could be to attach a `timer` property to the store that holds t
 Anecdotes can now be filtered. Filtering **is case-sensitive**, unlike the previous filters in earlier parts. The implementation follows the story closely.
 
 Action data will be stored within the `data` field of the object, even if there is only one piece of data. Not sure why the story uses the `data` field at first, but drops it in part b.
+
+## Exercise 6.13
+Installed json-server and axios. Unlike with our other modules, we are wrapping our anecdote service export in an object literal because we plan on returning more than just the one function.
+
+Server is set up, and application is now initialized using data in the DB. Implementation is copied pretty directly from the story.
