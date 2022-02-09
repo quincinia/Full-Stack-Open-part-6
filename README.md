@@ -47,3 +47,10 @@ Action data will be stored within the `data` field of the object, even if there 
 Installed json-server and axios. Unlike with our other modules, we are wrapping our anecdote service export in an object literal because we plan on returning more than just the one function.
 
 Server is set up, and application is now initialized using data in the DB. Implementation is copied pretty directly from the story.
+
+## Exercise 6.14
+Application can now add anecdotes to the database. Implementation also follows the story.
+
+Network calls should be handled in the component that generates them, not within the reducer. The reducer should only manage the local state, not the database (?). When using `json-server`, IDs will be generated for you, so you don't need to put them in your POST calls.
+
+Haven't set up eslint for this project (yet?).

@@ -8,19 +8,20 @@
 //     'Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.'
 // ]
 
-const getId = () => (100000 * Math.random()).toFixed(0)
+// const getId = () => (100000 * Math.random()).toFixed(0)
 
-const comp = (a, b) => b.votes - a.votes
-
-const asObject = (anecdote) => {
-    return {
-        content: anecdote,
-        id: getId(),
-        votes: 0
-    }
-}
-
+// Now obsolete since DB stores anecdotes as objects, and anecdotes are converted to objects in the POST request.
+// const asObject = (anecdote) => {
+//     return {
+//         content: anecdote,
+//         id: getId(),
+//         votes: 0
+//     }
+// }
+        
 // const initialState = anecdotesAtStart.map(asObject)
+        
+const comp = (a, b) => b.votes - a.votes
 
 const anecdoteReducer = (state = [], action) => {
     console.log('state now: ', state)
@@ -39,7 +40,7 @@ const anecdoteReducer = (state = [], action) => {
                 )
                 .sort(comp)
         case 'NEW_ANECDOTE':
-            return [...state, asObject(action.data.anecdote)].sort(comp)
+            return [...state, action.data.anecdote].sort(comp)
         case 'INIT_ANECDOTES':
             return action.data
         default:
