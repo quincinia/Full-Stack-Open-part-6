@@ -54,3 +54,8 @@ Application can now add anecdotes to the database. Implementation also follows t
 Network calls should be handled in the component that generates them, not within the reducer. The reducer should only manage the local state, not the database (?). When using `json-server`, IDs will be generated for you, so you don't need to put them in your POST calls.
 
 Haven't set up eslint for this project (yet?).
+
+## Exercise 6.15
+**Ignore** the "network calls" portion from 6.14. Apparently I was wrong.
+
+Installed redux-thunk and attached it to the store. Application now initializes itself within the action creator.
