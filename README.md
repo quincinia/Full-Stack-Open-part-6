@@ -59,3 +59,6 @@ Haven't set up eslint for this project (yet?).
 **Ignore** the "network calls" portion from 6.14. Apparently I was wrong.
 
 Installed redux-thunk and attached it to the store. Application now initializes itself within the action creator.
+
+## Exercise 6.16
+Adding new notes is now done through the action creator. Had a little trouble fixing names of variables, but that wasn't too bad. Implementation follows the story.
