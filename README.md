@@ -65,3 +65,6 @@ Adding new notes is now done through the action creator. Had a little trouble fi
 
 ## Exercise 6.17
 Votes are now saved to the database. Pretty straightforward implementation, had to change around the function parameters for the voting functions. Had a little trouble with names again; when assigning the `data` property to an object, you should probably omit the curly brackets. I fixed the naming convention for the `createAnecdote` action creator to keep things consistent.
+
+## Exercise 6.18
+Timed notifications can now be launched with a single call. I didn't really need any asynchronous action to implement this, the new `timedNotification` function is just a macro for the existing actions. For this reason, the function actually isn't a true action creator since it doesn't define any new action.
