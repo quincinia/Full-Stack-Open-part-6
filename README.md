@@ -62,3 +62,6 @@ Installed redux-thunk and attached it to the store. Application now initializes 
 
 ## Exercise 6.16
 Adding new notes is now done through the action creator. Had a little trouble fixing names of variables, but that wasn't too bad. Implementation follows the story.
+
+## Exercise 6.17
+Votes are now saved to the database. Pretty straightforward implementation, had to change around the function parameters for the voting functions. Had a little trouble with names again; when assigning the `data` property to an object, you should probably omit the curly brackets. I fixed the naming convention for the `createAnecdote` action creator to keep things consistent.
