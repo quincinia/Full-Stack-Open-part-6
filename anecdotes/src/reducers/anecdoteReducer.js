@@ -74,7 +74,7 @@ export const initAnecdotes = () => {
         const anecdotes = await anecdoteService.getAll()
         dispatch({
             type: 'INIT_ANECDOTES',
-            data: anecdotes
+            data: anecdotes.sort(comp)
         })
     }
 }
