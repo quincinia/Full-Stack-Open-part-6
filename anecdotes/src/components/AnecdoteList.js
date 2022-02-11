@@ -6,9 +6,9 @@ import { setTimer, setNotifMessage } from '../reducers/notificationReducer'
 const Anecdote = ({ anecdote }) => {
     const dispatch = useDispatch()
 
-    const vote = (id) => {
-        console.log('vote', id)
-        dispatch(addVote(id))
+    const vote = () => {
+        console.log('vote', anecdote.id)
+        dispatch(addVote(anecdote))
         dispatch(setNotifMessage(`you voted '${anecdote.content}'`))
         const timer = setTimeout(() => {
             dispatch(setNotifMessage(null))
@@ -21,7 +21,7 @@ const Anecdote = ({ anecdote }) => {
             <div>{anecdote.content}</div>
             <div>
                 has {anecdote.votes}
-                <button onClick={() => vote(anecdote.id)}>vote</button>
+                <button onClick={() => vote()}>vote</button>
             </div>
         </div>
     )
