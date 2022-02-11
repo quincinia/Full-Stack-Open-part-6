@@ -39,4 +39,14 @@ export const setNotifMessage = (message) => {
     }
 }
 
+export const timedNotification = (message, seconds) => {
+    return (dispatch) => {
+        dispatch(setNotifMessage(message))
+        const timer = setTimeout(() => {
+            dispatch(setNotifMessage(null))
+        }, seconds * 1000)
+        dispatch(setTimer(timer))
+    }
+}
+
 export default notificationReducer
