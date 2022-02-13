@@ -71,3 +71,6 @@ Timed notifications can now be launched with a single call. I didn't really need
 
 ## Exercise 6.19
 The Notification component now uses `connect`. A pretty simple change since Notification does not dispatch any actions.
+
+## Exercise 6.20
+Filter and AnecdoteForm components now use `connect`. Also a pretty simple change. I am destructuring the props object for convenience.
