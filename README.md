@@ -74,3 +74,6 @@ The Notification component now uses `connect`. A pretty simple change since Noti
 
 ## Exercise 6.20
 Filter and AnecdoteForm components now use `connect`. Also a pretty simple change. I am destructuring the props object for convenience.
+
+## Exercise 6.21
+This bug has been fixed as of Exercise 6.11.
