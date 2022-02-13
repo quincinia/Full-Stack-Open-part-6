@@ -68,3 +68,6 @@ Votes are now saved to the database. Pretty straightforward implementation, had 
 
 ## Exercise 6.18
 Timed notifications can now be launched with a single call. I didn't really need any asynchronous action to implement this, the new `timedNotification` function is just a macro for the existing actions. For this reason, the function actually isn't a true action creator since it doesn't define any new action.
+
+## Exercise 6.19
+The Notification component now uses `connect`. A pretty simple change since Notification does not dispatch any actions.
